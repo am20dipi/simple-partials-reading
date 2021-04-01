@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @author = @post.author
+    # this allows the instance variable @author to be used in the partial and in other view folders
   end
 
   def new
